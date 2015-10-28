@@ -1,0 +1,598 @@
+2015/10/22 02:31:09 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_US 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Default base='/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13' 
+2015/10/22 02:31:09 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:31:09 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:31:09 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are END times 
+2015/10/22 02:31:09 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2015/10/22 02:31:09 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2015/10/22 02:31:09 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2015/10/22 02:31:09 WARN  - jmeter.engine.util.CompoundVariable: Did not find any functions 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/testquoted.csv 
+2015/10/22 02:31:09 ERROR - jmeter.config.CSVDataSet: java.io.IOException: Missing trailing quote-char in quoted field:["d4
+Previous line is malformed] 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/testquoted.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: No.such.filename 
+2015/10/22 02:31:09 ERROR - jmeter.config.CSVDataSet: java.io.FileNotFoundException: /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/No.such.filename (No such file or directory) 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/testempty.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/testempty.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/testutf8.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/testutf8.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/test.csv Alias: bin/testfiles/test.csv@abc 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/test.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/test.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/test.csv@abc 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/testheader.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/testheader.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/testheader.csv 
+2015/10/22 02:31:09 INFO  - jmeter.services.FileServer: Close: bin/testfiles/testheader.csv 
+2015/10/22 02:31:09 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: bin/testfiles/xyzxyz (No such file or directory) 
+2015/10/22 02:31:09 INFO  - jmeter.protocol.http.parser.HTMLParser: Created org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2015/10/22 02:31:09 INFO  - jmeter.protocol.http.parser.HtmlParserHTMLParser: Using htmlparser version: 2.0 (Release Build Sep 17, 2006) 
+2015/10/22 02:31:09 INFO  - jmeter.protocol.http.parser.HTMLParser: Created org.apache.jmeter.protocol.http.parser.HtmlParserHTMLParser 
+2015/10/22 02:31:09 INFO  - jmeter.protocol.http.parser.HTMLParser: Created org.apache.jmeter.protocol.http.parser.JTidyHTMLParser 
+2015/10/22 02:31:09 INFO  - jmeter.protocol.http.parser.HTMLParser: Created org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.parser.HTMLParser: Created org.apache.jmeter.protocol.http.parser.JsoupBasedHtmlParser 
+2015/10/22 02:31:10 ERROR - jmeter.util.XPathUtil: Type=Val=false Tol=false org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 4; XML document structures must start and end within the same entity. 
+2015/10/22 02:31:10 WARN  - jmeter.extractor.XPathExtractor: SAXException while processing (<) XML document structures must start and end within the same entity. 
+2015/10/22 02:31:10 WARN  - jmeter.extractor.XPathExtractor: TransformerException while processing (<) A location path was expected, but the following token was encountered:  < 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Reset base to'/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/empty.csv Alias: empty 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Close: empty 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Reset base to'/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/test.csv 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Close: bin/testfiles/test.csv 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Close: bin/testfiles/test.csv 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Stored: bin/testfiles/test.csv 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Close: bin/testfiles/test.csv 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Set new base='null' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Reset base to'/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Stored: no-such-file Alias: missing 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Reset base to'/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Set new base='/Users/i840044/dev/apache-jmeter-src' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Set new base='/Users/i840044/dev' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Set new base='/Users/i840044/dev/apache-jmeter-src/abcd' 
+2015/10/22 02:31:10 INFO  - jmeter.services.FileServer: Set new base='/Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/abcd' 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: No response parsers defined: text/html only will be scanned for embedded resources 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.sampler.HTTPJavaImpl: Maximum connection retries = 10 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.sampler.PostWriterTest: file.encoding: UTF-8 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.sampler.PostWriterTest: Using other encoding: ISO-8859-1 
+2015/10/22 02:31:10 INFO  - jmeter.protocol.http.control.CacheManager: Will only cache the following methods: [GET] 
+2015/10/22 02:31:43 INFO  - jorphan.exec.KeyToolUtils: keytool found at 'keytool' 
+2015/10/22 02:31:43 INFO  - jmeter.protocol.http.proxy.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/bin/proxyserver.jks 
+2015/10/22 02:31:47 INFO  - jmeter.protocol.http.control.HttpMirrorServer: Creating HttpMirror ... on port 8181 
+2015/10/22 02:31:47 INFO  - jmeter.protocol.http.control.HttpMirrorServer: HttpMirror up and running! 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Using SaveService properties file encoding UTF-8 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Using SaveService properties file version 1656252 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Using SaveService properties version 2.8 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/AssertionTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/AuthManagerTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/HeaderManagerTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/InterleaveTestPlan2.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/InterleaveTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/LoopTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/Modification Manager.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/OnceOnlyTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/proxy.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/ProxyServerTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/SimpleTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GuiTest.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.protocol.http.control.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_ 
+2015/10/22 02:31:49 INFO  - jmeter.protocol.http.sampler.HTTPHCAbstractImpl: Local host = YMQM00556267A 
+2015/10/22 02:31:49 INFO  - jmeter.protocol.http.sampler.HTTPHC3Impl: HTTP request retry count = 0 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GuiTest231.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.util.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GenTest27.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GenTest210.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/AssertionTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/AuthManagerTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/HeaderManagerTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/InterleaveTestPlan2.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/InterleaveTestPlan.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GuiTest_original.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.visualizers.GraphAccumVisualizer to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.modifier.UserParameterModifier to org.apache.jmeter.config.ConfigTestElement 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.modifier.gui.UserParameterModifierGui to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property AccessLogSampler.parser_class_name to parserClassName 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property HTTPSampler.image_parser to imageParsing 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property HTTPSampler.port to portString 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property HTTPSampler.domain to domain 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property AccessLogSampler.log_file to logFile 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GenTest22.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.jms.control.gui.JndiDefaultsGui to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.modifier.gui.UserParameterModifierGui to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.java.control.gui.BSFSamplerGui to org.apache.jmeter.testbeans.gui.TestBeanGUI 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.filename to filename 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.parameters to parameters 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.query to script 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.language to scriptLanguage 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.jms.control.gui.JMSConfigGui to org.apache.jmeter.protocol.jms.control.gui.JMSSamplerGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.visualizers.GraphAccumVisualizer to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GenTest231.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.http.modifier.gui.UserParameterModifierGui to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.java.control.gui.BSFSamplerGui to org.apache.jmeter.testbeans.gui.TestBeanGUI 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.filename to filename 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.language to scriptLanguage 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.parameters to parameters 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.query to script 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.jms.control.gui.JMSConfigGui to org.apache.jmeter.protocol.jms.control.gui.JMSSamplerGui 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.visualizers.GraphAccumVisualizer to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:49 INFO  - jmeter.save.SaveService: Loading file: bin/testfiles/GenTest24.jmx 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.protocol.java.control.gui.BSFSamplerGui to org.apache.jmeter.testbeans.gui.TestBeanGUI 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.filename to filename 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.language to scriptLanguage 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.parameters to parameters 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading property BSFSampler.query to script 
+2015/10/22 02:31:49 INFO  - jmeter.util.NameUpdater: Upgrading class org.apache.jmeter.visualizers.GraphAccumVisualizer to org.apache.jmeter.config.gui.ObsoleteGui 
+2015/10/22 02:31:50 INFO  - jmeter.protocol.http.control.HttpMirrorServer: HttpMirror Server stopped 
+2015/10/22 02:32:00 INFO  - jmeter.protocol.http.control.HttpMirrorServer: Creating HttpMirror ... on port 8182 
+2015/10/22 02:32:00 INFO  - jmeter.protocol.http.control.HttpMirrorServer: HttpMirror up and running! 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.protocol.http.sampler.HTTPHC4Impl: HTTP request retry count = 0 
+2015/10/22 02:32:00 INFO  - jmeter.protocol.http.sampler.HTTPHC4Impl: Setting up HTTPS TrustAll scheme 
+2015/10/22 02:32:00 INFO  - jmeter.util.JsseSSLManager: Using default SSL protocol: TLS 
+2015/10/22 02:32:00 INFO  - jmeter.util.JsseSSLManager: SSL session context: per-thread 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to en 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to ignoreresources 
+2015/10/22 02:32:00 ERROR - jmeter.util.JMeterUtils: Could not find resources for 'ignoreresources' 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test1 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test1 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure1(DistributedRunnerTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test1 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test2 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test2 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure1(DistributedRunnerTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Following remote engines will retry configuring: [test1, test2] 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Pausing before retry for 1ms 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test1 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test1 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure1(DistributedRunnerTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test1 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test2 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test2 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure1(DistributedRunnerTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting the test @ Thu Oct 22 02:32:00 EDT 2015 (1445495520588) 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been started 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Shutting down remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been shut down 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Exiting remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been exited 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to ignoreresources 
+2015/10/22 02:32:00 ERROR - jmeter.util.JMeterUtils: Could not find resources for 'ignoreresources' 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test1 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test1 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure2(DistributedRunnerTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test1 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test2 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test2 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure2(DistributedRunnerTest.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to ignoreresources 
+2015/10/22 02:32:00 ERROR - jmeter.util.JMeterUtils: Could not find resources for 'ignoreresources' 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test1 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test1 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure3(DistributedRunnerTest.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test1 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test2 
+2015/10/22 02:32:00 ERROR - jmeter.engine.DistributedRunner: Failed to create engine at test2 java.lang.IllegalArgumentException: Throwing on Engine creation to simulate failure
+	at org.apache.jmeter.engine.DistributedRunnerTest$DistributedRunnerEmul.createEngine(DistributedRunnerTest.java:122)
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213)
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:91)
+	at org.apache.jmeter.engine.DistributedRunnerTest.testFailure3(DistributedRunnerTest.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Failed to configure test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting the test @ Thu Oct 22 02:32:00 EDT 2015 (1445495520590) 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been started 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Shutting down remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been shut down 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Exiting remote engines 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test1 
+2015/10/22 02:32:00 WARN  - jmeter.engine.DistributedRunner: Host not found in list of active engines: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been exited 
+2015/10/22 02:32:00 INFO  - jmeter.util.JMeterUtils: Setting Locale to ignoreresources 
+2015/10/22 02:32:00 ERROR - jmeter.util.JMeterUtils: Could not find resources for 'ignoreresources' 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test1 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Configuring remote engine: test2 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Starting the test @ Thu Oct 22 02:32:00 EDT 2015 (1445495520591) 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been started 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Shutting down remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been shut down 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Stopping remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been stopped 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Exiting remote engines 
+2015/10/22 02:32:00 INFO  - jmeter.engine.DistributedRunner: Remote engines have been exited 
+2015/10/22 02:32:01 INFO  - jmeter.protocol.http.control.HttpMirrorServer: HttpMirror Server stopped 
+2015/10/22 02:32:16 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``source ("testfiles/BeanShellTest.bsh");'' : Method Invocation this.interpreter.source 
+2015/10/22 02:32:16 WARN  - jmeter.functions.BeanShell: Error running BSH script org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``source ("testfiles/BeanShellTest.bsh");'' : Method Invocation this.interpreter.source
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:191)
+	at org.apache.jmeter.util.BeanShellInterpreter.eval(BeanShellInterpreter.java:197)
+	at org.apache.jmeter.functions.BeanShell.execute(BeanShell.java:103)
+	at org.apache.jmeter.functions.AbstractFunction.execute(AbstractFunction.java:51)
+	at org.apache.jmeter.functions.PackageTest.BSH1(PackageTest.java:267)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:86)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.jmeter.util.BeanShellInterpreter.bshInvoke(BeanShellInterpreter.java:170)
+	... 25 more
+Caused by: Sourced file: inline evaluation of: ``source ("testfiles/BeanShellTest.bsh");'' : Method Invocation this.interpreter.source : at Line: 14 : in file: /bsh/commands/source.bsh : this .interpreter .source ( filename , this .caller .namespace ) 
+
+Called from method: source : at Line: 1 : in file: inline evaluation of: ``source ("testfiles/BeanShellTest.bsh");'' : source ( "testfiles/BeanShellTest.bsh" ) 
+Target exception: java.io.FileNotFoundException: /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/testfiles/BeanShellTest.bsh (No such file or directory)
+
+	at bsh.BSHMethodInvocation.eval(BSHMethodInvocation.java:97)
+	at bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:102)
+	at bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:47)
+	at bsh.BSHReturnStatement.eval(BSHReturnStatement.java:48)
+	at bsh.BSHBlock.evalBlock(BSHBlock.java:130)
+	at bsh.BSHBlock.eval(BSHBlock.java:80)
+	at bsh.BshMethod.invokeImpl(BshMethod.java:362)
+	at bsh.BshMethod.invoke(BshMethod.java:258)
+	at bsh.BshMethod.invoke(BshMethod.java:186)
+	at bsh.Name.invokeLocalMethod(Name.java:958)
+	at bsh.Name.invokeMethod(Name.java:804)
+	at bsh.BSHMethodInvocation.eval(BSHMethodInvocation.java:75)
+	at bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:102)
+	at bsh.BSHPrimaryExpression.eval(BSHPrimaryExpression.java:47)
+	at bsh.Interpreter.eval(Interpreter.java:645)
+	at bsh.Interpreter.eval(Interpreter.java:739)
+	at bsh.Interpreter.eval(Interpreter.java:728)
+	... 30 more
+
+2015/10/22 02:32:16 INFO  - jmeter.functions.PackageTest: Expecting file not found 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Attaching xtestfiles/test.csv 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening xtestfiles/test.csv as xtestfiles/test.csv 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: xtestfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:16 INFO  - jmeter.functions.PackageTest: Expecting no entry for file 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileWrapper: endRow(): no entry for xtestfiles/test.csv 
+2015/10/22 02:32:16 INFO  - jmeter.functions.PackageTest: Expecting file not found 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening xtestfiles/test.csv as *ABC 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: xtestfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:16 INFO  - jmeter.functions.PackageTest: Expecting cannot open file 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileWrapper: Cannot perform initial open using alias *ABC 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Attaching testfiles/test.csv 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening testfiles/test.csv as testfiles/test.csv 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: testfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening testfiles/test.csv as *A 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: testfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileWrapper: Cannot perform initial open using alias *A 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Attaching testfiles/testblank.csv 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening testfiles/testblank.csv as testfiles/testblank.csv 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: testfiles/testblank.csv (No such file or directory) 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Attaching testfiles/test.csv 
+2015/10/22 02:32:16 INFO  - jmeter.functions.FileWrapper: Opening testfiles/test.csv as testfiles/test.csv 
+2015/10/22 02:32:16 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: testfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.FileWrapper: Attaching testfiles/test.csv 
+2015/10/22 02:32:17 INFO  - jmeter.functions.FileWrapper: Opening testfiles/test.csv as testfiles/test.csv 
+2015/10/22 02:32:17 WARN  - jmeter.functions.FileRowColContainer: java.io.FileNotFoundException: testfiles/test.csv (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: setParameters(testfiles/SFFTest#'.'txt,,1,3) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Start = 1 Current = 1 End = 3 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main using format testfiles/SFFTest#'.'txt 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main opening file testfiles/SFFTest1.txt 
+2015/10/22 02:32:17 ERROR - jmeter.functions.StringFromFile: openFile() error: java.io.FileNotFoundException: testfiles/SFFTest1.txt (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Detected end of sequence. 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: setParameters(testfiles/SFFTest1.txt,) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main opening file testfiles/SFFTest1.txt 
+2015/10/22 02:32:17 ERROR - jmeter.functions.StringFromFile: openFile() error: java.io.FileNotFoundException: testfiles/SFFTest1.txt (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: setParameters(testfiles/SFFTest1.txt,,,) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.StringFromFile: Exception parsing  as int, value will not be considered as Start Number sequence 
+2015/10/22 02:32:17 WARN  - jmeter.functions.StringFromFile: Exception parsing  as int, value will not be considered as End Number sequence 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Start = -2 Current = 1 End = -2 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main opening file testfiles/SFFTest1.txt 
+2015/10/22 02:32:17 ERROR - jmeter.functions.StringFromFile: openFile() error: java.io.FileNotFoundException: testfiles/SFFTest1.txt (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: setParameters(xxtestfiles/SFFTest1.txt,,,) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.StringFromFile: Exception parsing  as int, value will not be considered as Start Number sequence 
+2015/10/22 02:32:17 WARN  - jmeter.functions.StringFromFile: Exception parsing  as int, value will not be considered as End Number sequence 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Start = -2 Current = 1 End = -2 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main opening file xxtestfiles/SFFTest1.txt 
+2015/10/22 02:32:17 ERROR - jmeter.functions.StringFromFile: openFile() error: java.io.FileNotFoundException: xxtestfiles/SFFTest1.txt (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: setParameters(testfiles/SFFTest1.txt,,,2) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.StringFromFile: Exception parsing  as int, value will not be considered as Start Number sequence 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Start = -2 Current = 1 End = 2 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main opening file testfiles/SFFTest1.txt 
+2015/10/22 02:32:17 ERROR - jmeter.functions.StringFromFile: openFile() error: java.io.FileNotFoundException: testfiles/SFFTest1.txt (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.StringFromFile: main Detected end of sequence. 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: ../build.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: ../build.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: nosuch.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: ../build.xml (No such file or directory) 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening  
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException:  (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper:  (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening  
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException:  (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper:  (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening  
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException:  (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper:  (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: Opening no-such-file 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: no-such-file (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: no-such-file (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: XPathOne: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: XPathTwo: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: main: clearing container 
+2015/10/22 02:32:17 INFO  - jmeter.functions.XPathWrapper: XPathOne: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:17 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:18 INFO  - jmeter.functions.XPathWrapper: XPathTwo: Opening testfiles/XPathTest.xml 
+2015/10/22 02:32:18 WARN  - jmeter.functions.XPathFileContainer: java.io.FileNotFoundException: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:18 WARN  - jmeter.functions.XPathWrapper: testfiles/XPathTest.xml (No such file or directory) 
+2015/10/22 02:32:18 ERROR - jmeter.functions.XPathWrapper: XPathFileContainer is null! 
+2015/10/22 02:32:18 WARN  - jmeter.protocol.http.control.HC3CookieHandler: Not storing invalid cookie: <test=2;domain=.hc.apache.org> for URL http://jakarta.apache.org/ (Illegal domain attribute ".hc.apache.org". Domain of origin: "jakarta.apache.org") 
+2015/10/22 02:32:18 INFO  - jmeter.save.SaveService: Loading file: /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/testfiles/load_bug_list.jmx 
+2015/10/22 02:32:18 INFO  - jmeter.save.SaveService: Loading file: /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/testfiles/load_bug_list.jmx 
+2015/10/22 02:32:18 INFO  - jmeter.save.SaveService: Loading file: /Users/i840044/dev/apache-jmeter-src/apache-jmeter-2.13/testfiles/load_bug_list.jmx 
+2015/10/22 02:32:18 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_US 
+2015/10/22 02:32:19 WARN  - jmeter.util.XPathUtil: Type=Val=true Tol=false org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 832; Element type "illegal" must be declared. 
+2015/10/22 02:32:19 ERROR - jmeter.util.XPathUtil: Type=Val=false Tol=false org.xml.sax.SAXParseException; Premature end of file. 
+2015/10/22 02:32:19 ERROR - jmeter.util.XPathUtil: Type=Val=false Tol=false org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 80; The element type "b" must be terminated by the matching end-tag "</b>". 
+2015/10/22 02:32:19 WARN  - jmeter.util.XPathUtil: Type=Val=true Tol=false org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 27; Document root element "company-xmlext-query-ret", must match DOCTYPE root "null". 
