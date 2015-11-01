@@ -23,7 +23,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
-
+import org.apache.jmeter.testelement.property.PropertyIterator;
 import org.apache.jorphan.collections.Data;
 import org.apache.jorphan.logging.LoggingManager;
 import org.apache.log.Logger;
@@ -279,4 +279,12 @@ public class PowerTableModel extends DefaultTableModel {
             model.addColumnValue(model.getHeaders()[column], value);
         }
     }
+
+	public void populateTable(PropertyIterator iter) {
+		clearData();
+		while (iter.hasNext()) {
+			addRow(new Object[] { iter.next().getStringValue() });
+		}
+		fireTableDataChanged();
+	}
 }

@@ -331,17 +331,9 @@ public class ProxyControlGui extends LogicControllerGui implements JMeterGUIComp
         reinitializeTargetCombo();// Set up list of potential targets and
                                     // enable listener
 
-        populateTable(includeModel, model.getIncludePatterns().iterator());
-        populateTable(excludeModel, model.getExcludePatterns().iterator());
+        includeModel.populateTable(model.getIncludePatterns().iterator());
+        excludeModel.populateTable(model.getExcludePatterns().iterator());
         repaint();
-    }
-
-    private void populateTable(PowerTableModel p_model, PropertyIterator iter) {
-        p_model.clearData();
-        while (iter.hasNext()) {
-            p_model.addRow(new Object[] { iter.next().getStringValue() });
-        }
-        p_model.fireTableDataChanged();
     }
 
     /*
