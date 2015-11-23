@@ -30,6 +30,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
+import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
 import org.apache.jorphan.logging.LoggingManager;
@@ -124,6 +126,7 @@ public class DistributedRunner {
         println("Starting remote engines");
         long now = System.currentTimeMillis();
         println("Starting the test @ " + new Date(now) + " (" + now + ")");
+    	toggleLoadTestTimer(true);
         for (String address : addresses) {
             try {
                 if (engines.containsKey(address)) {
@@ -151,6 +154,7 @@ public class DistributedRunner {
 
     public void stop(List<String> addresses) {
         println("Stopping remote engines");
+    	toggleLoadTestTimer(false);
         for (String address : addresses) {
             try {
                 if (engines.containsKey(address)) {
@@ -176,6 +180,7 @@ public class DistributedRunner {
 
     public void shutdown(List<String> addresses) {
         println("Shutting down remote engines");
+    	toggleLoadTestTimer(false);
         for (String address : addresses) {
             try {
                 if (engines.containsKey(address)) {
@@ -193,6 +198,7 @@ public class DistributedRunner {
 
     public void exit(List<String> addresses) {
         println("Exiting remote engines");
+    	toggleLoadTestTimer(false);
         for (String address : addresses) {
             try {
                 if (engines.containsKey(address)) {
@@ -205,6 +211,17 @@ public class DistributedRunner {
             }
         }
         println("Remote engines have been exited");
+    }
+    
+    /**
+     * Start or stop the load test timer.
+     * @param start	true used to start timer, false to stop.
+     */
+    public void toggleLoadTestTimer(final boolean start) {
+	    GuiPackage guiPackage = GuiPackage.getInstance();
+	    if (guiPackage != null) {
+	    	guiPackage.toggleLoadTestTimer(start);
+	    }
     }
 
     private JMeterEngine getClientEngine(String address, HashTree testTree) {

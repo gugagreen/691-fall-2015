@@ -28,6 +28,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.jmeter.JMeter;
+import org.apache.jmeter.gui.GuiPackage;
 import org.apache.jmeter.samplers.SampleEvent;
 import org.apache.jmeter.testbeans.TestBean;
 import org.apache.jmeter.testbeans.TestBeanHelper;
@@ -311,29 +312,17 @@ public class StandardJMeterEngine implements JMeterEngine, Runnable {
         SampleEvent.initSampleVariables();
 
         JMeterContextService.startTest();
-        try {
-            PreCompiler compiler = new PreCompiler();
-            test.traverse(compiler);
-        } catch (RuntimeException e) {
-            log.error("Error occurred compiling the tree:",e);
-            JMeterUtils.reportErrorToUser("Error occurred compiling the tree: - see log file");
-            return; // no point continuing
+        boolean preCompilerSuccess = traversePreCompiler();
+        if (!preCompilerSuccess) {
+        	return; // no point continuing
         }
-        /**
-         * Notification of test listeners needs to happen after function
-         * replacement, but before setting RunningVersion to true.
-         */
-        SearchByClass<TestStateListener> testListeners = new SearchByClass<TestStateListener>(TestStateListener.class); // TL - S&E
-        test.traverse(testListeners);
-
-        // Merge in any additional test listeners
-        // currently only used by the function parser
-        testListeners.getSearchResults().addAll(testList);
-        testList.clear(); // no longer needed
-
-        if (!startListenersLater ) { notifyTestListenersOfStart(testListeners); }
-        test.traverse(new TurnElementsOn());
-        if (startListenersLater) { notifyTestListenersOfStart(testListeners); }
+        
+        GuiPackage guiPackage = GuiPackage.getInstance();
+        if (guiPackage != null) {
+        	guiPackage.toggleLoadTestTimer(true);
+        }
+        
+        SearchByClass<TestStateListener> testListeners = processTestListeners();
 
         List<?> testLevelElements = new LinkedList<Object>(test.list(test.getArray()[0]));
         removeThreadGroups(testLevelElements);
@@ -359,7 +348,91 @@ public class StandardJMeterEngine implements JMeterEngine, Runnable {
         int groupCount = 0;
         JMeterContextService.clearTotalThreads();
         
-        if (setupIter.hasNext()) {
+        groupCount = processSetupIter(testLevelElements, setupSearcher, setupIter, notifier, groupCount);
+
+        groups.clear(); // The groups have all completed now                
+
+        /*
+         * Here's where the test really starts. Run a Full GC now: it's no harm
+         * at all (just delays test start by a tiny amount) and hitting one too
+         * early in the test can impair results for short tests.
+         */
+        JMeterUtils.helpGC();
+        
+        JMeterContextService.getContext().setSamplingStarted(true);
+        boolean mainGroups = running; // still running at this point, i.e. setUp was not cancelled
+        groupCount = processIter(testLevelElements, searcher, iter, notifier, groupCount); // end of thread groups
+        logGroupCount(groupCount);
+
+        //wait for all Test Threads To Exit
+        waitThreadsStopped();
+        groups.clear(); // The groups have all completed now            
+
+        processPostIter(testLevelElements, postSearcher, postIter, notifier, mainGroups);
+
+        notifyTestListenersOfEnd(testListeners);
+        
+        if (guiPackage != null) {
+        	guiPackage.toggleLoadTestTimer(false);
+        }
+
+        if (JMeter.isNonGUI() && SYSTEM_EXIT_FORCED) {
+            log.info("Forced JVM shutdown requested at end of test");
+            System.exit(0);
+        }
+    }
+
+	public void logGroupCount(int groupCount) {
+		if (groupCount == 0){ // No TGs found
+            log.info("No enabled thread groups found");
+        } else {
+            if (running) {
+                log.info("All thread groups have been started");
+            } else {
+                log.info("Test stopped - no more thread groups will be started");
+            }
+        }
+	}
+
+	public SearchByClass<TestStateListener> processTestListeners() {
+		/**
+         * Notification of test listeners needs to happen after function
+         * replacement, but before setting RunningVersion to true.
+         */
+        SearchByClass<TestStateListener> testListeners = new SearchByClass<TestStateListener>(TestStateListener.class); // TL - S&E
+        test.traverse(testListeners);
+
+        // Merge in any additional test listeners
+        // currently only used by the function parser
+        testListeners.getSearchResults().addAll(testList);
+        testList.clear(); // no longer needed
+
+        if (!startListenersLater ) { notifyTestListenersOfStart(testListeners); }
+        test.traverse(new TurnElementsOn());
+        if (startListenersLater) { notifyTestListenersOfStart(testListeners); }
+		return testListeners;
+	}
+
+	/**
+	 * Traverses the PreCompiler.
+	 * @return	True if the operation succeed. False if it failed.
+	 */
+    public boolean traversePreCompiler() {
+		boolean failed = false;
+		try {
+            PreCompiler compiler = new PreCompiler();
+            test.traverse(compiler);
+        } catch (RuntimeException e) {
+            log.error("Error occurred compiling the tree:",e);
+            JMeterUtils.reportErrorToUser("Error occurred compiling the tree: - see log file");
+            failed = true;
+        }
+		return failed;
+	}
+
+	public int processSetupIter(List<?> testLevelElements, SearchByClass<SetupThreadGroup> setupSearcher,
+			Iterator<SetupThreadGroup> setupIter, ListenerNotifier notifier, int groupCount) {
+		if (setupIter.hasNext()) {
             log.info("Starting setUp thread groups");
             while (running && setupIter.hasNext()) {//for each setup thread group
                 AbstractThreadGroup group = setupIter.next();
@@ -379,19 +452,12 @@ public class StandardJMeterEngine implements JMeterEngine, Runnable {
             groupCount=0;
             JMeterContextService.clearTotalThreads();
         }
+		return groupCount;
+	}
 
-        groups.clear(); // The groups have all completed now                
-
-        /*
-         * Here's where the test really starts. Run a Full GC now: it's no harm
-         * at all (just delays test start by a tiny amount) and hitting one too
-         * early in the test can impair results for short tests.
-         */
-        JMeterUtils.helpGC();
-        
-        JMeterContextService.getContext().setSamplingStarted(true);
-        boolean mainGroups = running; // still running at this point, i.e. setUp was not cancelled
-        while (running && iter.hasNext()) {// for each thread group
+	public int processIter(List<?> testLevelElements, SearchByClass<AbstractThreadGroup> searcher,
+			Iterator<AbstractThreadGroup> iter, ListenerNotifier notifier, int groupCount) {
+		while (running && iter.hasNext()) {// for each thread group
             AbstractThreadGroup group = iter.next();
             //ignore Setup and Post here.  We could have filtered the searcher. but then
             //future Thread Group objects wouldn't execute.
@@ -409,22 +475,14 @@ public class StandardJMeterEngine implements JMeterEngine, Runnable {
                 log.info("Waiting for thread group: "+groupName+" to finish before starting next group");
                 group.waitThreadsStopped();
             }
-        } // end of thread groups
-        if (groupCount == 0){ // No TGs found
-            log.info("No enabled thread groups found");
-        } else {
-            if (running) {
-                log.info("All thread groups have been started");
-            } else {
-                log.info("Test stopped - no more thread groups will be started");
-            }
         }
+		return groupCount;
+	}
 
-        //wait for all Test Threads To Exit
-        waitThreadsStopped();
-        groups.clear(); // The groups have all completed now            
-
-        if (postIter.hasNext()){
+	public void processPostIter(List<?> testLevelElements, SearchByClass<PostThreadGroup> postSearcher,
+			Iterator<PostThreadGroup> postIter, ListenerNotifier notifier, boolean mainGroups) {
+		int groupCount;
+		if (postIter.hasNext()){
             groupCount = 0;
             JMeterContextService.clearTotalThreads();
             log.info("Starting tearDown thread groups");
@@ -444,14 +502,7 @@ public class StandardJMeterEngine implements JMeterEngine, Runnable {
             }
             waitThreadsStopped(); // wait for Post threads to stop
         }
-
-        notifyTestListenersOfEnd(testListeners);
-
-        if (JMeter.isNonGUI() && SYSTEM_EXIT_FORCED) {
-            log.info("Forced JVM shutdown requested at end of test");
-            System.exit(0);
-        }
-    }
+	}
 
     /**
      * @return total of active threads in all Thread Groups

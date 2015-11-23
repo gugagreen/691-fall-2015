@@ -42,6 +42,8 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -65,6 +67,7 @@ import javax.swing.JSplitPane;
 import javax.swing.JTree;
 import javax.swing.MenuElement;
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.TreeCellRenderer;
@@ -174,6 +177,17 @@ public class MainFrame extends JFrame implements TestStateListener, Remoteable, 
      * Counter
      */
     private JLabel errorsOrFatalsLabel;
+    
+    /**
+     * Display the time of the load test.
+     */
+    private JLabel loadTestTime;
+    
+    /**
+     * Timer to calculate load test elapsed time.
+     */
+    private LoadTestTimer timer;
+    
     /**
      * LogTarget that receives ERROR or FATAL
      */
@@ -199,6 +213,9 @@ public class MainFrame extends JFrame implements TestStateListener, Remoteable, 
 
         activeThreads = new JLabel("0"); // $NON-NLS-1$
         activeThreads.setToolTipText(JMeterUtils.getResString("active_threads_tooltip")); // $NON-NLS-1$
+        
+        timer = new LoadTestTimer();
+        loadTestTime = new JLabel(timer.formatTime(0));
 
         warnIndicator = new JButton(warningIcon);
         warnIndicator.setMargin(new Insets(0, 0, 0, 0));
@@ -561,6 +578,9 @@ public class MainFrame extends JFrame implements TestStateListener, Remoteable, 
         toolPanel.add(totalThreads);
         toolPanel.add(Box.createRigidArea(new Dimension(10, 15)));
         toolPanel.add(runningIndicator);
+        toolPanel.add(new JLabel("   "));
+        toolPanel.add(loadTestTime);
+        toolPanel.add(new JLabel("   "));
         return toolPanel;
     }
 
@@ -825,5 +845,52 @@ public class MainFrame extends JFrame implements TestStateListener, Remoteable, 
      */
     public void updateUndoRedoIcons(boolean canUndo, boolean canRedo) {
         toolbar.updateUndoRedoIcons(canUndo, canRedo);
+    }
+    
+    class LoadTestTimer extends Timer {
+		private static final long serialVersionUID = 1L;
+		private static final int DELAY = 1000;
+    	private static final String TIME_FORMAT = "HH:mm:ss";
+    	private static final String TIMEZONE = "GMT";
+    	
+    	public LoadTestTimer() {
+    		super(DELAY, new LoadTestListener());
+    	}
+    	
+    	public void setTime() {
+    		final long startTime = JMeterContextService.getTestStartTime();
+    		final long currentTime = System.currentTimeMillis();
+    		
+    		if (startTime == 0) {
+    			this.stop();
+    		} else {
+	    		long elapsedTime = (currentTime - startTime);
+	    		loadTestTime.setText(formatTime(elapsedTime));
+    		}
+    	}
+    	
+    	public String formatTime(long elapsedTime) {
+    		Date elapsedDate = new Date(elapsedTime);
+    		SimpleDateFormat df = new java.text.SimpleDateFormat(TIME_FORMAT);
+    		df.setTimeZone(java.util.TimeZone.getTimeZone(TIMEZONE));
+    		return df.format(elapsedDate);
+    	}
+    	
+    }
+    
+    class LoadTestListener implements ActionListener {
+
+    	@Override
+    	public void actionPerformed(ActionEvent e) {
+    		timer.setTime();
+    	}
+    }
+    
+    public void startTimer() {
+    	timer.start();
+    }
+    
+    public void stopTimer() {
+    	timer.stop();
     }
 }

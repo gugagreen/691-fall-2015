@@ -549,6 +549,20 @@ public final class GuiPackage implements LocaleChangeListener, HistoryListener {
     public MainFrame getMainFrame() {
         return mainFrame;
     }
+    
+    /**
+     * Start or stop the load test timer.
+     * @param start	true used to start timer, false to stop.
+     */
+    public void toggleLoadTestTimer(final boolean start) {
+    	if (mainFrame != null) {
+    		if (start) {
+    			mainFrame.startTimer();
+    		} else {
+    			mainFrame.stopTimer();
+    		}
+    	}
+    }
 
     /**
      * Get the listener for JMeter's test tree.
